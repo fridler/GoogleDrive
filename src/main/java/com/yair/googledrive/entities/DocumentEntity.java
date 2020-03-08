@@ -33,6 +33,14 @@ public class DocumentEntity implements Serializable {
     public DocumentEntity() {
     }
 
+    public DocumentEntity(long id, String title, String textContent, LocalDateTime createDateTime, LocalDateTime updateDateTime) {
+        this.id = id;
+        this.title = title;
+        this.textContent = textContent;
+        this.createDateTime = createDateTime;
+        this.updateDateTime = updateDateTime;
+    }
+
     public long getId() {
         return id;
     }
