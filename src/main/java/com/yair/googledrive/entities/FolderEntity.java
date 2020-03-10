@@ -3,10 +3,12 @@ package com.yair.googledrive.entities;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
-public class FolderEntity {
+@Table(name = "Folder")
+public class FolderEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

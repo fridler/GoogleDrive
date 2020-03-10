@@ -25,7 +25,7 @@ public class FolderController {
         return folder.getId();
     }
 
-    public FolderEntity getFolderById(long folderId){
+    public FolderEntity getFolderById(long folderId) {
 
         FolderEntity folder = (FolderEntity) folderDao.findById(folderId).get();
         return folder;
@@ -44,7 +44,7 @@ public class FolderController {
     }
 
     public void deleteFolderById(long folderId) throws Exception {
-        if (folderDao.findById(folderId).get() == null){
+        if (folderDao.findById(folderId).get() == null) {
             throw new Exception("Folder Id don't found");
         }
         folderDao.deleteById(folderId);
